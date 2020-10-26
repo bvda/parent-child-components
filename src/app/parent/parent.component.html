@@ -1,0 +1,12 @@
+<div id="parent-container">
+  <h1>ParentComponent</h1>
+  <p>Total count: {{ sum }}</p>
+  <p>{{ childComponent1 | json }}</p>
+  <p>{{ childComponent2 | json }}</p>
+  <app-child [counter]="childComponent1" (buttonClicked)="onChildButtonClicked($event)">
+    <h2>Child component 1</h2>
+  </app-child>
+  <app-child [counter]="childComponent2" (buttonClicked)="onChildButtonClicked($event)">
+    <h2>Child component 2</h2>
+  </app-child>
+</div>
